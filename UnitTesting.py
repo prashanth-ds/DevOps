@@ -14,27 +14,27 @@ class UnitTesting(unittest.TestCase):
 
     def test_add(self):
         addition = self.addition.evaluate()
-        self.assertEqual(addition, 25)
+        self.assertEqual(addition, 25, f"Addition is {addition}")
 
     def test_sub(self):
         subtraction = self.subtraction.evaluate()
-        self.assertEqual(subtraction, 5)
+        self.assertEqual(subtraction, 5, f"Subtraction is {subtraction}")
 
     def test_mul(self):
         multiplication = self.multiplication.evaluate()
-        self.assertEqual(multiplication, 121)
+        self.assertEqual(multiplication, 121, f"Multiplication is {multiplication}")
 
     def test_operands(self):
         multiple_operands = self.multiple_operands.evaluate()
-        self.assertEqual(multiple_operands, 'Same Operator Used More than once')
+        self.assertEqual(multiple_operands, 'Same Operator Used More than once', 'Same Operator Used More than once')
 
     def test_MultipleOperator(self):
         multiple_operators = self.multiple_operators.evaluate()
-        self.assertEqual(multiple_operators, 'Operators Used Multiple times')
+        self.assertEqual(multiple_operators, 'Operators Used Multiple times', 'Operators Used Multiple times')
 
     def test_operator(self):
         invalid_operator = self.invalid_operator.evaluate()
-        self.assertEqual(invalid_operator, 'Operator Invalid')
+        self.assertEqual(invalid_operator, 'Operator Invalid', 'Operator Invalid')
 
 
 if __name__ == '__main__':

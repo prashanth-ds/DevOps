@@ -54,5 +54,5 @@ class Calculator:
             return condition
 
 
-# obj = Calculator("2/4")
-# print(obj.evaluate())
+obj = Calculator("2/4")
+print(obj.evaluate())
