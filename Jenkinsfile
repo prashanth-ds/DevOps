@@ -1,21 +1,29 @@
-pipeline {
+pipeline
+{
 
-    agent {
-        docker {
+    agent
+    {
+        docker
+        {
             image 'python:3.8-slim-buster'
         }
     }
 
-    stages {
-        stage('Building Stage') {
-            steps {
+    stages
+    {
+        stage('Build')
+        {
+            steps
+            {
                 sh 'python --version'
             }
         }
 
-        stage("Testing Stage") {
-            steps {
-                sh 'echo /"Testing stage/"'
+        stage('Testing')
+        {
+            steps
+            {
+                sh 'echo "Testing stage"'
                 sh 'python UnitTesting.py'
             }
         }
