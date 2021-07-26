@@ -16,7 +16,7 @@ pipeline {
         stage("Testing Stage") {
             steps {
                 sh 'echo /"Testing stage/"'
-                sh 'python -m unittest UnitTesting.py
+                sh 'python UnitTesting.py
             }
         }
     }
