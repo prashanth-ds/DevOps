@@ -24,17 +24,17 @@ class UnitTesting(unittest.TestCase):
         multiplication = self.multiplication.evaluate()
         self.assertEqual(multiplication, 121)
 
-    # def test_operands(self):
-    #     multiple_operands = self.multiple_operands.evaluate()
-    #     self.assertEqual(multiple_operands, 6)
-    #
-    # def test_MultipleOperator(self):
-    #     multiple_operators = self.multiple_operators.evaluate()
-    #     self.assertEqual(multiple_operators, 12)
-    #
-    # def test_operator(self):
-    #     invalid_operator = self.invalid_operator.evaluate()
-    #     self.assertEqual(invalid_operator, 1)
+    def test_operands(self):
+        multiple_operands = self.multiple_operands.evaluate()
+        self.assertEqual(multiple_operands, 'Same Operator Used More than once')
+
+    def test_MultipleOperator(self):
+        multiple_operators = self.multiple_operators.evaluate()
+        self.assertEqual(multiple_operators, 'Operators Used Multiple times')
+
+    def test_operator(self):
+        invalid_operator = self.invalid_operator.evaluate()
+        self.assertEqual(invalid_operator, 'Operator Invalid')
 
 
 if __name__ == '__main__':
