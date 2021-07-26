@@ -1,17 +1,17 @@
 pipeline
 {
-    agent
-    {
-        docker
-        {
-            image 'python:3.8-slim-buster'
-        }
-    }
-
+    agent none
     stages
     {
         stage('Build')
         {
+            agent
+            {
+                docker
+                {
+                    image 'python:3.8-slim-buster'
+                }
+            }
             steps
             {
                 sh 'python --version'
@@ -20,6 +20,13 @@ pipeline
 
         stage('Testing')
         {
+            agent
+            {
+                docker
+                {
+                    image 'python:3.8-slim-buster'
+                }
+            }
             steps
             {
                 sh 'echo "Testing stage"'
