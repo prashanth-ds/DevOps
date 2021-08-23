@@ -11,6 +11,7 @@ class UnitTesting(unittest.TestCase):
         self.multiple_operands = Calculator("1+2+3")
         self.multiple_operators = Calculator("2+2*5")
         self.invalid_operator = Calculator("2/2")
+        print("This is Evaluation")
 
     def test_add(self):
         addition = self.addition.evaluate()
