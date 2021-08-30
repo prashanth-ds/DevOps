@@ -11,7 +11,7 @@ class UnitTesting(unittest.TestCase):
         self.multiple_operands = Calculator("1+2+3")
         self.multiple_operators = Calculator("2+2*5")
         self.invalid_operator = Calculator("2/2")
-        print("This is Evaluation")
+        print("This is Evaluation on 30th august")
 
     def test_add(self):
         addition = self.addition.evaluate()
@@ -29,13 +29,13 @@ class UnitTesting(unittest.TestCase):
         multiple_operands = self.multiple_operands.evaluate()
         self.assertEqual(multiple_operands, 'Same Operator Used More than once', 'Same Operator Used More than once')
 
-    def test_MultipleOperator(self):
-        multiple_operators = self.multiple_operators.evaluate()
-        self.assertEqual(multiple_operators, 'Operators Used Multiple times', 'Operators Used Multiple times')
+#     def test_MultipleOperator(self):
+#         multiple_operators = self.multiple_operators.evaluate()
+#         self.assertEqual(multiple_operators, 'Operators Used Multiple times', 'Operators Used Multiple times')
 
-    def test_operator(self):
-        invalid_operator = self.invalid_operator.evaluate()
-        self.assertEqual(invalid_operator, 'Operator Invalid', 'Operator Invalid')
+#     def test_operator(self):
+#         invalid_operator = self.invalid_operator.evaluate()
+#         self.assertEqual(invalid_operator, 'Operator Invalid', 'Operator Invalid')
 
 
 if __name__ == '__main__':
